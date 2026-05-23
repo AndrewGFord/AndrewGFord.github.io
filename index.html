@@ -1,7 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Ford - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        main {
+            padding: 60px 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            background: #f9f9f9;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .project-card h2 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.4em;
+        }
+
+        .project-card p {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        footer {
+            background: #f5f5f5;
+            color: #666;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            main {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>This is a placeholder page.</p>
+    <div class="container">
+        <header>
+            <h1>Andrew Ford</h1>
+            <p>Portfolio - Data Analysis & Game Theory Projects</p>
+        </header>
+
+        <main>
+            <h2 class="section-title">Board Game Projects</h2>
+            
+            <div class="projects">
+                <div class="project-card">
+                    <h2>Risk Dice Rolling</h2>
+                    <p>An interactive visualization tool for dice probability calculations in the classic game of Risk.
+                        While playing in an actual game, we started talking about whether the game favors attackers or defenders.
+                        This project was inspired by that conversation, and now includes a wide variety of scenarios and visualizations.</p>
+                    <a href="RiskDiceRolling/" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <h2>Chess Win Probabilities</h2>
+                    <p>A sophisticated analysis platform that calculates win probabilities across various chess positions using machine learning.
+                        Most similar models are trained on high-level games only,
+                        whereas this model accounts for player strength and the increased likelihood that lower-level players blunder.</p>
+                    <a href="ChessWinProbabilities/" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Andrew Ford. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
